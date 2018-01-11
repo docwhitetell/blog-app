@@ -123,13 +123,13 @@ class ResponsiveDrawer extends React.Component{
                             <Header app={app} classes={classes} handleUserLogout={this.handleUserLogout} handleDrawerToggle={this.handleDrawerToggle}/>
                             <Hidden mdUp implementation="css">
                                 <Drawer
-                                    type="permanen"
+                                    type="temporary"
                                     anchor={theme.direction === 'rtl' ? 'right' : 'left'}
                                     open={mobileOpen}
                                     classes={{
                                         paper: classes.drawerPaper,
                                     }}
-                                    onRequestClose={this.handleDrawerToggle}
+                                    onClose={this.handleDrawerToggle}
                                     ModalProps={{
                                         keepMounted: true, // Better open performance on mobile.
                                     }}
@@ -137,7 +137,7 @@ class ResponsiveDrawer extends React.Component{
                                     <LeftMenu app={app} dropDown={dropDown} classes={classes} handleClick={this.handleClick} handleChangeTheme={this.handleChangeTheme}/>
                                 </Drawer>
                             </Hidden>
-                            <Hidden mdDown implementation="css">
+                            <Hidden smDown implementation="css">
                                 <Drawer
                                     type="permanent"
                                     open
@@ -145,6 +145,7 @@ class ResponsiveDrawer extends React.Component{
                                         paper: classes.drawerPaper,
                                     }}
                                     style={{width: 250}}
+                                    onClose={this.handleDrawerToggle}
                                 >
                                     <LeftMenu app={app} dropDown={dropDown} classes={classes} handleClick={this.handleClick} handleChangeTheme={this.handleChangeTheme}/>
                                 </Drawer>

@@ -37,18 +37,22 @@ const Service=({data,classes,dispatch})=>{
                       animation={[{opacity:0,scale:0,delay:1000,duration:600},{scale:1,opacity:1,y:0}]}
                       style={{opacity: 0}}>
                 <div className={classes.aboutLeft}>
-                    <h1 className={classes.aboutTitle} style={{}}>About</h1>
+                    <h1 className={classes.aboutTitle} style={{}}>Me</h1>
                     <div className={classes.gradientDivider}></div>
                 </div>
                 <div className={classes.aboutRight}>
                     <p className={classes.aboutWord}>
-                        I am a programmer who is exploring the world of all stack development.Good at using jQuery and Bootstrap frameworks and exploring ReactJs.If you have some advices. Please contact my email and help me point out my shortcomings. Thanks you
+                      我是 Doctor White，这是我的个人网站，除了熟悉前端HTML，css，JavaScript，常用的JavaScript框架如jquery，React，
+                      还对PHP有一定研究，能够熟练使用Laravel框架进行一般的后端功能和接口开发。
+                      目前在更深入探索React框架的大型网站应用的开发以及深入学习JavaScript语言的发展ES，ES6。虽然进入前端领域时间仅仅只有一年多一点的时间，
+                      但是我对于我的学习能力很自信，立志当前端领域的技术弄潮儿，希望在未来的成长过程中能多得到大神的指点.
+                      网站由于大量使用material-ui组件库，其对于flex布局以及css3新特性的使用让IE11以下浏览器无法完整浏览，见谅。
                     </p>
                 </div>
             </TweenOne>
             <div className={classes.work}>
                     <OverPack style={{ width:'100%',}} always={false} playScale={0.1}>
-                        <h1 key='title' className={classes.sectionName}>Blogs</h1>
+                        <h1 key='title' className={classes.sectionName}>最新文章</h1>
                         <Grid key='container' container spacing={40} style={{minHeight:380}}>
                         {data.blogslist.map((item,index)=>{
                             return(

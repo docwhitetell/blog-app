@@ -80,7 +80,7 @@ class Welcome extends React.Component{
             <div className={classes.main}>
                 <Banner classes={classes}/>
                 <Service classes={classes} data={front} dispatch={dispatch}/>
-                <OverPack style={{width: '100%',}} always={false} playScale={0.1}>
+             {/*   <OverPack style={{width: '100%',}} always={false} playScale={0.1}>
                     <TweenOne key={'products'} animation={[{opacity: 0, y: -20, scale: 0.94, duration: 300}, {
                         opacity: 1,
                         y: 0,
@@ -295,7 +295,7 @@ class Welcome extends React.Component{
                             <Button className={classes.moreProducts}>Custom <Icon type="arrow-right"/></Button>
                         </div>
                     </TweenOne>
-                </OverPack>
+                </OverPack>*/}
             </div>
         );
     }

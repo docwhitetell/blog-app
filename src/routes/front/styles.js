@@ -6,12 +6,12 @@ const styles=theme=>({
 
 
     banner:{
-        height:800,
+        height:600,
         //background: 'rgb(30,36,58)',
 
-        [theme.breakpoints.down('md')]: {
+      /*  [theme.breakpoints.down('md')]: {
            height:'auto'
-        },
+        },*/
     },
     bannerBg:{
         position:'absolute',

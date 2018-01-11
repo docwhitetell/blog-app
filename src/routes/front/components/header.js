@@ -34,7 +34,7 @@ const Header=({app,classes,dispatch})=>{
                 </IconButton>
                 <span className={classes.headerLogo}></span>
             </div>
-            <Hidden mdDown implementation="css">
+            <Hidden smDown implementation="css">
                 <div className={classes.signIU}>
                     {app.user? (<a href="/admin/dashboard" className={classes.login}>Dashboard</a>) :(<a href="/login" className={classes.login}>Sign In</a>)}
                 </div>

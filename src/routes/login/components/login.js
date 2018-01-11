@@ -52,7 +52,7 @@ const LoginForm = ({dispatch,classes}) => {
                 <form onSubmit={handleSubmit}>
                     <TextField
                         className={classes.formfield}
-                        InputClassName={classes.textfieldInput}
+                        /*InputClassName={classes.textfieldInput}*/
                         labelClassName={classes.textfieldLabel}
                         margin="dense"
                         id="email"
@@ -64,7 +64,7 @@ const LoginForm = ({dispatch,classes}) => {
                     />
                     <TextField
                         className={classes.formfield}
-                        InputClassName={classes.textfieldInput}
+                      /*  InputClassName={classes.textfieldInput}*/
                         labelClassName={classes.textfieldLabel}
                         margin="dense"
                         id="password"

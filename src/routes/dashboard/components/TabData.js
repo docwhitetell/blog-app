@@ -29,7 +29,6 @@ const TabData=({dashboard,classes,data,handleTabChange})=>{
                         style={{color:'#ffffff'}}
                         defaultValue="2017-05-24"
                         className={classes.textField}
-                        inputClassName={classes.formInput}
                         labelClassName={classes.formLabel}
                         InputLabelProps={{
                             shrink: true,
