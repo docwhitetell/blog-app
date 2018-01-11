@@ -1,0 +1,20 @@
+.loginForm{
+    padding: 36px;
+}
+
+.loginFormGorgot{
+    float: right;
+}
+.loginFormButton {
+    width: 100%;
+}
+.container {
+    width: 300px;
+}
+.formControl{
+    margin: 10px;
+    padding: 0 30px !important;
+}
+.errormsg{
+    color:#E91E63 ;
+}

@@ -1,0 +1,128 @@
+.cardRow{
+  /*  margin: 20px auto;*/
+    margin: 20px auto;
+    width: 96%;
+}
+.card{
+    display: flex;
+    padding: 0 20px;
+    cursor:pointer;
+    /*padding: 4px;*/
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.04), 0px 2px 2px 0px rgba(0, 0, 0, 0.04), 0px 3px 1px -2px rgba(0, 0, 0, 0.04);
+}
+.card:hover{
+    cursor: hand;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02,1.02);
+}
+.icon{
+    text-align: center;
+    line-height: 120px;
+    font-size:54px;
+}
+.icontext{
+    color: #616161;
+    font-size:24px;
+}
+.cardLeft{
+   flex:2;
+    height: 120px;
+}
+.cardRight{
+    flex:3;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.crTitle{
+    color: #424242;
+    font-size: 28px;
+}
+.crNum{
+    color: #616161;
+    font-size: 16px;
+}
+.chartItem{
+    margin-bottom: 10px;
+}
+
+.dataCard{
+    padding: 20px 10px 20px 10px;
+}
+.dataCardHeader{
+
+}
+.cardHeaderInfo{
+    float:right;
+    padding-right: 10px;
+}
+.CardTitle{
+    height: 28px;
+    font-size: 14px;
+    color:#757575 ;
+    font-weight: 300;
+}
+.CardMain{
+
+}
+.leftData{
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    width: 50%;
+}
+.rightData{
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+    width: 50%;
+
+}
+.salesRank{
+    margin-top:10px;
+}
+@media (max-width: 600px) {
+    .salesRank{
+        padding: 0 40px;
+    }
+}
+.salesRankItem{
+    margin-top: 12px;
+}
+.salesItemLeftTop{
+    display:inline-block;
+    background:#263238;
+    border-radius:50%;
+    width:24px;height:24px;
+    color:#ffffff;
+    text-align:center;
+    line-height:24px;
+    font-size:16px
+}
+.salesItemLeft{
+    display:inline-block;
+    background:#B0BEC5;
+    border-radius:50%;
+    width:24px;height:24px;
+    color:#ffffff;
+    text-align:center;
+    line-height:24px;
+    font-size:16px
+}
+.salesItemMid{
+    margin:0 20px
+}
+.salesItemRight{
+    float:right;
+    margin-right:20px;
+    line-height:24px;
+}
+
+.cardHeader{
+    height: 56px;
+    line-height: 56px ;
+    padding: 0 20px;
+    position:relative;
+}
