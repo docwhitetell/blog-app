@@ -111,7 +111,7 @@ class ResponsiveDrawer extends React.Component{
                             {children}
                         </main>
 
-                        {(pathname!='/login' && pathname!='/') && <FrontFooter/>}
+                        {(pathname!='/login') && <FrontFooter/>}
                     </div>
                 </MuiThemeProvider>
             )

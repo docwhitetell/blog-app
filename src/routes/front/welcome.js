@@ -39,7 +39,7 @@ function SamplePrevArrow(props) {
     );
 }
 
-class Index extends React.Component{
+class Welcome extends React.Component{
     constructor(props){
         super(props)
     }
@@ -302,7 +302,7 @@ class Index extends React.Component{
 
 }
 
-Index.propTypes = {
+Welcome.propTypes = {
 };
 
-export default connect(({app,front})=>({app,front}))(withStyles(styles)(Index));
+export default connect(({app,front})=>({app,front}))(withStyles(styles)(Welcome));
