@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'dva'
-import AntdTable from '../../components/table/antdTable'
+import AntdTable from '../../../components/table/antdTable'
 const columns = [{
     title: 'Resource Name',
     dataIndex: 'original_name',
@@ -22,18 +22,7 @@ class Lists extends React.Component{
     constructor(props){
         super(props)
     }
-    componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
-    componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
+
     handleTablePageChange=(pagination,filters, sorter)=>{
         const {files,dispatch}=this.props
         if(pagination.current===files.filesPagination.current){

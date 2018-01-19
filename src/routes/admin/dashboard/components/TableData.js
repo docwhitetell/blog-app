@@ -5,8 +5,8 @@ import Grid from 'material-ui/Grid';
 import Card from 'material-ui/Card';
 
 import {Icon,Menu} from 'antd'
-import AntdTable from '../../../components/table/antdTable'
-import AreasChart from '../../../components/charts/AreasChart'
+import AntdTable from '../../../../components/table/antdTable'
+import AreasChart from '../../../../components/charts/AreasChart'
 
 const SubMenu = Menu.SubMenu;
 

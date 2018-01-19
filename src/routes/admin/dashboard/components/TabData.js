@@ -7,9 +7,9 @@ import Tabs, { Tab } from 'material-ui/Tabs';
 
 import Card  from 'material-ui/Card';
 
-import BarsChartWithXY from '../../../components/charts/BarChartWithXY'
-import LinesChartWithXY from '../../../components/charts/LineChartWithXY'
-import DraggableList from '../../../components/draggable/DraggableList'
+import BarsChartWithXY from '../../../../components/charts/BarChartWithXY'
+import LinesChartWithXY from '../../../../components/charts/LineChartWithXY'
+import DraggableList from '../../../../components/draggable/DraggableList'
 
 
 

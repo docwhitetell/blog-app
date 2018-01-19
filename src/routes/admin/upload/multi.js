@@ -1,8 +1,8 @@
 import React from 'react'
 import Grid from 'material-ui/Grid';
-import Dropzone from '../../components/upload/Dropzone'
-import AntdUpload from '../../components/upload/antdUpload'
-import AntdMultiUpload from '../../components/upload/antdMutilUpload'
+import Dropzone from '../../../components/upload/Dropzone'
+import AntdUpload from '../../../components/upload/antdUpload'
+import AntdMultiUpload from '../../../components/upload/antdMutilUpload'
 
 import Button from 'material-ui/Button';
 import {connect} from 'dva'
@@ -11,16 +11,10 @@ class filesUpload extends React.Component{
         super(props)
     }
     componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
+
     }
     componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
+
     }
     render(){
         return (

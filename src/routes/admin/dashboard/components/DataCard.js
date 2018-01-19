@@ -6,8 +6,8 @@ import Button from 'material-ui/Button';
 import Card, { CardHeader, CardMedia, CardContent, CardActions }  from 'material-ui/Card';
 import Divider from 'material-ui/Divider';
 import {Icon,Menu} from 'antd'
-import AreasChart from '../../../components/charts/AreasChart'
-import BarsChart from '../../../components/charts/BarChart'
+import AreasChart from '../../../../components/charts/AreasChart'
+import BarsChart from '../../../../components/charts/BarChart'
 
 const DataCard =({data,classes})=>{
       return(

@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from '../../components/table/MdTable'
+import Table from '../../../components/table/MdTable'
 import {connect} from 'dva'
 import keycode from 'keycode';
 import {
@@ -18,16 +18,10 @@ class User extends React.Component{
         super(props)
     }
     componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
+
     }
     componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
+
     }
     handleSelectAllClick = (event, checked) => {
         const {users,dispatch}=this.props

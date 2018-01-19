@@ -37,18 +37,7 @@ class Table extends React.Component{
     constructor(props){
         super(props)
     }
-    componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
-    componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
+
     render(){
         const {classes}=this.props
         return(

@@ -7,9 +7,8 @@ import Dialog, {
     DialogTitle,
 } from 'material-ui/Dialog';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
-import Bricks from 'bricks.js'
 import AppBar from 'material-ui/AppBar';
-import CirLoading from '../../components/loading/CirLoading'
+import CirLoading from '../../../components/loading/CirLoading'
 import Button from 'material-ui/Button';
 import { withStyles } from 'material-ui/styles';
 import { GridList, GridListTile } from 'material-ui/GridList';
@@ -22,19 +21,14 @@ class myFiles extends React.Component{
     }
     componentDidMount() {
         const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
+
         dispatch({
             type:'files/query',
             payload:{pageSize:15}
         })
     }
     componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
+
     }
 
     handleRequestClose=(index)=>{

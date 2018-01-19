@@ -11,7 +11,6 @@ import {message} from 'antd'
 import {filter} from '../../../services/filter'
 
 const LoginForm = ({dispatch,classes}) => {
-    const csrf_token=document.getElementsByTagName('meta')['csrf-token'].getAttribute('content')
     const state = {
         email: "",
         password: "",
@@ -59,6 +58,7 @@ const LoginForm = ({dispatch,classes}) => {
                         name="email"
                         label="Email Address"
                         type="email"
+                        InputProps={{className:classes.textfieldInput}}
                         onChange={handleInputOnchange}
                         fullWidth
                     />
@@ -71,6 +71,7 @@ const LoginForm = ({dispatch,classes}) => {
                         name="password"
                         label="Password"
                         type="password"
+                        InputProps={{className:classes.textfieldInput}}
                         onChange={handleInputOnchange}
                         fullWidth
                     />

@@ -1,13 +1,13 @@
 import React from 'react'
 import {connect} from 'dva'
-import PageHeader from '../../components/pageHeader/pageHeader'
+
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import Card from 'material-ui/Card';
-import MyEditor from '../../components/editor/MyEditor'
+import MyEditor from '../../../components/editor/MyEditor'
 
 class UIEditor extends React.Component{
     constructor(props){
@@ -16,18 +16,7 @@ class UIEditor extends React.Component{
             editorState:EditorState.createEmpty(),
         }
     }
-    componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
-    componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
+
      onEditorStateChange=(editorState)=>{
         console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())))
         this.setState({

@@ -70,18 +70,6 @@ class Dashboard extends React.Component{
         })
     }
 
-    componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
-    componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
     render(){
         const {dashboard,dispatch,classes}=this.props
         return(

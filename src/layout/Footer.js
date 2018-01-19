@@ -3,7 +3,7 @@ import { withStyles } from 'material-ui/styles';
 import Typography from 'material-ui/Typography';
 const styles=theme=>({
     footer:{
-        position: 'absolute',
+       /* position: 'absolute',*/
         paddingRight:'0 !important',
         width:'100%',
         backgroundColor:'#F8BBD0',

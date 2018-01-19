@@ -151,7 +151,7 @@ class ResponsiveDrawer extends React.Component{
                                 </Drawer>
                             </Hidden>
                             <main className={classes.content}>
-                                <CirLoading loading={app.pageloading}/>
+                                <CirLoading loading={loading.global}/>
                                 <PageHeader title={app.pageHeader}/>
                                 {children}
                             </main>

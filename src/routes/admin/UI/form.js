@@ -91,18 +91,7 @@ class Form extends React.Component{
             radio:null,
         }
     }
-    componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
-    componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
+
     handleChange=(e)=>{
         this.setState({
             input:e.target.value

@@ -13,7 +13,7 @@ import Select from 'material-ui/Select';
 import { MenuItem } from 'material-ui/Menu';
 import Input, { InputLabel } from 'material-ui/Input';
 import TextField from 'material-ui/TextField';
-import MyEditor from '../../components/editor/MyEditor'
+import MyEditor from '../../../components/editor/MyEditor'
 import Grid from 'material-ui/Grid'
 import {Icon} from 'antd'
 import Slider from 'react-slick'
@@ -22,26 +22,15 @@ import 'slick-carousel/slick/slick-theme.css'
 import { Upload, message} from 'antd';
 import Cookies from 'js-cookie'
 
-import config from '../../utils/config'
-import {filter} from '../../services/filter'
+import config from '../../../utils/config'
+import {filter} from '../../../services/filter'
 import styles from './styles'
 //{blogs,dispatch,classes}
 class noteEditor extends React.Component{
     constructor(props){
         super(props)
     }
-    componentDidMount(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
-    componentDidUpdate(){
-        const {app,dispatch}=this.props
-        if(app.pageloading){
-            dispatch({type:'app/update',payload:{pageloading:false}})
-        }
-    }
+
 
     onEditorStateChange=(editorState) =>{
         const {dispatch}=this.props

@@ -1,16 +1,8 @@
 import React from 'react'
 import {withStyles} from 'material-ui/styles'
-import Table from '../../components/table/MdTable'
 import {connect} from 'dva'
 import keycode from 'keycode';
 import Button from 'material-ui/Button';
-import {
-    TableCell,
-    TableRow,
-} from 'material-ui/Table';
-import Checkbox from 'material-ui/Checkbox';
-import IconButton from 'material-ui/IconButton';
-import EditIcon from 'material-ui-icons/Edit'
 
 import Dialog, {
     DialogActions,
@@ -38,20 +30,6 @@ const column= [
 class List extends React.Component{
     constructor(props) {
         super(props)
-    }
-
-    componentDidMount() {
-        const {app, dispatch} = this.props
-        if (app.pageloading) {
-            dispatch({type: 'app/update', payload: {pageloading: false}})
-        }
-    }
-
-    componentDidUpdate() {
-        const {app, dispatch} = this.props
-        if (app.pageloading) {
-            dispatch({type: 'app/update', payload: {pageloading: false}})
-        }
     }
 
     handleSelectAllClick = (event, checked) => {

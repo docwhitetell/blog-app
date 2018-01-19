@@ -54,6 +54,10 @@ const Footer = ({classes})=>{
                                     <Icon style={{color:'#ffffff',fontSize:18,marginRight:12}} type="mail"/>
                                     <a href="" className={classes.flink}>510559413@qq.com</a>
                                 </li>
+                               <li className={classes.footLinksItem}>
+                                <Icon style={{color:'#ffffff',fontSize:18,marginRight:12}} type="mail"/>
+                                <a href="http://www.miitbeian.gov.cn" className={classes.flink}>粤ICP 18005927 号</a>
+                               </li>
                                 <li className={classes.footLinksItem}><a href="http://webscan.360.cn/index/checkwebsite/url/www.docwhite.cn">
                                     <img height={30} src="http://webscan.360.cn/status/pai/hash/742c3054f0d87c2933414d47805d34fd"/></a>
                                 </li>
