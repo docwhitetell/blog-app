@@ -1,16 +1,12 @@
-import React from 'react'
-import {withStyles} from 'material-ui/styles'
-import {connect} from 'dva'
+import React from 'react';
+import { withStyles } from 'material-ui/styles';
+import { connect } from 'dva';
 
-const styles=theme=>({
-
-})
-
-const SettingIndex=({app,settings,dispatch})=>{
-
-  return (<div>
-
-  </div>)
+const styles = () => ({});
+const SettingIndex = () => {
+  return (<div />);
 }
 
-export default connect(({app,settings})=>({app,settings}))(withStyles(styles)(SettingIndex))
+export default connect(
+  ({ app, settings }) => ({ app, settings }
+  ))(withStyles(styles)(SettingIndex));

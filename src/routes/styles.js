@@ -74,10 +74,10 @@ const styles = theme => ({
     fontSize: '16px',
   },
   menuText: {
-    color: '#37474F', fontSize: 16, fontWeight: 500
+    color: '#37474F', fontSize: 16, fontWeight: 500,
   },
   secondMenuText: {
-    color: '#37474F', fontSize: 12, fontWeight: 400
+    color: '#37474F', fontSize: 12, fontWeight: 400,
   },
   fixedBottom: {
     position: 'absolute',

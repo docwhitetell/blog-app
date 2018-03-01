@@ -26,67 +26,67 @@ import styles from './styles';
 class ResponsiveDrawer extends React.Component {
 
   handleChangeTheme = (e) => {
-    const { app, dispatch } = this.props
-    const value = e.target.value
-    const currentColor = value
-    store.set('currentColor', currentColor)
+    const { app, dispatch } = this.props;
+    const value = e.target.value;
+    const currentColor = value;
+    store.set('currentColor', currentColor);
     switch (value) {
       case 'blue':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.blue } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.blue } });
       case 'pink':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.pink } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.pink } });
       case 'indigo':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.indigo } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.indigo } });
       case 'red':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.red } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.red } });
       case 'purple':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.purple } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.purple } });
       case 'cyan':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.cyan } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.cyan } });
       case 'teal':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.teal } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.teal } });
       case 'green':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.green } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.green } });
       case 'yellow':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.yellow } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.yellow } });
       case 'amber':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.amber } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.amber } });
       case 'orange':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.orange } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.orange } });
       case 'grey':
-        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.grey } })
+        return dispatch({ type: 'app/update', payload: { currentColor: value, theme: app.colors.colors.grey } });
       default:
         break;
     }
   }
 
   handleClick = (target) => {
-    const { dispatch } = this.props
+    const { dispatch } = this.props;
     dispatch({
       type: 'app/dropdownShowHide',
       payload: target,
     });
   }
   handleUserLogout = () => {
-    Cookies.remove('access_token')
-    Cookies.remove('refresh_token')
-    const { dispatch } = this.props
+    Cookies.remove('access_token');
+    Cookies.remove('refresh_token');
+    const { dispatch } = this.props;
     dispatch({
       type: 'app/logout',
     });
   }
   handleDrawerToggle = () => {
-    const { dispatch } = this.props
+    const { dispatch } = this.props;
     dispatch({
       type: 'app/drawerShowHide',
     });
   }
 
   render() {
-    const { app, children, classes, theme, loading, location } = this.props
-    const { dropDown, mobileOpen } = app
-    let { pathname } = location
-    pathname = pathname.startsWith('/') ? pathname : `/${pathname}`
+    const { app, children, classes, theme, loading, location } = this.props;
+    const { dropDown, mobileOpen } = app;
+    let { pathname } = location;
+    pathname = pathname.startsWith('/') ? pathname : `/${pathname}`;
     /* 路由过滤，判断前台还是后台页面。前台过滤页面注册在routeMiddleware 中 */
     if (routeMiddleware(pathname)) {
       return (

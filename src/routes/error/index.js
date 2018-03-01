@@ -1,6 +1,6 @@
-import React from 'react'
-import { Icon } from 'antd'
-import styles from './index.less'
+import React from 'react';
+import { Icon } from 'antd';
+import styles from './index.less';
 
 const Error = () => (<div className="content-inner">
   <div className={styles.error}>
@@ -9,4 +9,4 @@ const Error = () => (<div className="content-inner">
   </div>
 </div>)
 
-export default Error
+export default Error;

@@ -157,15 +157,15 @@ const styles = theme => ({
     bottom: 25,
     position: 'absolute',
   },
-})
+});
 class login extends React.Component {
   componentDidMount() {
-    const { dispatch } = this.props
+    const { dispatch } = this.props;
     dispatch({ type: 'app/update', payload: { pageloading: false } });
   }
 
   render() {
-    const { classes } = this.props
+    const { classes } = this.props;
     return (
       <div className={classes.root}>
         <div className={classes.page}>
