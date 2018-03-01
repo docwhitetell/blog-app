@@ -1,5 +1,4 @@
 import React from 'react';
-
 import AppBar from 'material-ui/AppBar';
 import Grid from 'material-ui/Grid';
 import {

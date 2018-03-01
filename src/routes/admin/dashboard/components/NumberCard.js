@@ -5,7 +5,7 @@ import Grid from 'material-ui/Grid';
 import {Icon} from 'antd'
 import CountUp from 'react-countup';
 
-import styles from '../style.css'
+//import styles from '../style.css'
 const NumberCard=({classes})=>{
     return (
         <Grid spacing={0} container className={classes.cardRow}>

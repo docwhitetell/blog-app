@@ -3,9 +3,6 @@ import { connect } from 'dva';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
-import Card from 'material-ui/Card';
-import {Icon} from 'antd'
-import CountUp from 'react-countup';
 import NumberCard from './components/NumberCard'
 import DataCard from './components/DataCard'
 import TabData from './components/TabData'
@@ -36,7 +33,6 @@ const salseData=[
         {name:'Maternal and child products',percent:'7.80',sales:1231,color:'#009688'},
         {name:'Other',percent:'7.80%',sales:1231,color:'#FFEB3B'},
     ],
-
 ]
 
 //{dashboard,dispatch,classes}

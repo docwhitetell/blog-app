@@ -6,16 +6,16 @@ import classnames from 'classnames'
 import Banner from './components/banner'
 import Service from './components/service'
 
-import Button from 'material-ui/Button';
-import GradientProgress from '../../components/progress/gradient'
-import {Icon} from 'antd'
+//import Button from 'material-ui/Button';
+//import GradientProgress from '../../components/progress/gradient'
+//import {Icon} from 'antd'
 import ScrollAnim from 'rc-scroll-anim';
-import TweenOne from 'rc-tween-one';
+//import TweenOne from 'rc-tween-one';
 const {OverPack}=ScrollAnim
 import Hidden from 'material-ui/Hidden'
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+////import Slider from 'react-slick';
+//import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
 import styles from './styles'
 function SampleNextArrow(props) {
     const {className, style, onClick} = props

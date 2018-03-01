@@ -1,11 +1,9 @@
 import React from 'react'
-import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import { LinearProgress } from 'material-ui/Progress';
-import Button from 'material-ui/Button';
-import Card, { CardHeader, CardMedia, CardContent, CardActions }  from 'material-ui/Card';
-import Divider from 'material-ui/Divider';
-import {Icon,Menu} from 'antd'
+//import Button from 'material-ui/Button';
+import Card from 'material-ui/Card';
+import {Icon} from 'antd'
 import AreasChart from '../../../../components/charts/AreasChart'
 import BarsChart from '../../../../components/charts/BarChart'
 

@@ -271,7 +271,9 @@ const styles=theme=>({
     dataIconImg:{
         transition:'all 0.6s ease-in-out',
         '&:hover':
-            {transform:'rotate(360deg)'
+            {
+              transform:'rotate(360deg)'
+              //animation:'rotate360 2s'
             },
         width:80,
         [theme.breakpoints.down('sm')]: {
@@ -281,6 +283,14 @@ const styles=theme=>({
             width:40,
         },
 
+    },
+    '@keyframes rotate360':{
+      '0%':{
+        transform:'rotate(0deg)'
+      },
+      '100%':{
+        transform:'rotate(360deg)'
+      }
     },
     dataInfo:{
         display:'inline-block',

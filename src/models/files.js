@@ -41,15 +41,15 @@ export default {
 
     effects: {
         *query({payload},{call,put,select}){
-            const data=payload
+            const data=payload || {pageSize:15}
             const res=yield call(request, {url:config.api.userImgs,withtoken:true,params:data})
             if(res.status===200 ){
                 let open=[],alert=[]
-                    res.data.data.map((item,index)=>{
-                        open[index]=false
-                        alert[index]=false
-                    })
 
+                res.data.data.map((item,index)=>{
+                  open[index]=false
+                  alert[index]=false
+                })
                 store.set('open',open)
                 store.set('alert',alert)
                 yield put({
@@ -88,14 +88,12 @@ export default {
             yield put({
                 type:'alertClose'
             })
-
             const data={id:payload}
             const req=yield call(request, {url:config.api.deleteFiles,withtoken:true,params:data})
-            console.log(req)
             if(req.data.success){
                 console.log('delete success')
                 yield put({
-                    type:'query'
+                    type:'query',
                 })
             }else if(req.data.error){
                 console.log(req.data.error)
@@ -137,7 +135,7 @@ export default {
                 v=false
             })
             newState[payload.payload]=true
-            console.log(newState)
+            //console.log(newState)
             return{
                 ...state,
                 alert:newState
@@ -149,7 +147,7 @@ export default {
             for(var i=0;i<newState.length;i++){
                 alertArray[i]=false
             }
-            console.log(alertArray)
+           // console.log(alertArray)
            // newState[payload.payload]=false
             return {
                 ...state,

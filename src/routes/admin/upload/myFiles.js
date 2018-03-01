@@ -32,7 +32,7 @@ class myFiles extends React.Component{
     }
 
     handleRequestClose=(index)=>{
-        console.log(index)
+        //console.log(index)
         const {dispatch}=this.props
         dispatch({
             type:'files/dialogClose',
@@ -40,7 +40,7 @@ class myFiles extends React.Component{
         })
     }
     handleOpen=(index)=>{
-        console.log(index)
+        //console.log(index)
         const {dispatch}=this.props
         dispatch({
             type:'files/dialogOpen',
@@ -48,7 +48,7 @@ class myFiles extends React.Component{
         })
     }
     handleDelete=(id)=>{
-        console.log(id)
+        //console.log(id)
         const {dispatch}=this.props
         dispatch({
             type:'files/delete',
@@ -63,7 +63,7 @@ class myFiles extends React.Component{
         })
     }
     handleAlertClose=(index)=>{
-        console.log(index)
+        //console.log(index)
         const {dispatch}=this.props
         dispatch({
             type:'files/alertClose',
@@ -111,7 +111,7 @@ class myFiles extends React.Component{
                                                                             onClick={() => this.handleOpen(index)}/>
                                         </div>
                                     </div>
-                                    <Dialog open={alert[index]} onRequestClose={() => this.handleAlertClose(index)}>
+                                    <Dialog open={alert[index]} onClose={() => this.handleAlertClose(index)}>
                                         <DialogTitle>{"Delete ？"}</DialogTitle>
                                         <DialogContent>
                                             <DialogContentText>
@@ -129,7 +129,7 @@ class myFiles extends React.Component{
                                             </Button>
                                         </DialogActions>
                                     </Dialog>
-                                    <Dialog open={open[index]} onRequestClose={() => this.handleRequestClose(index)}
+                                    <Dialog open={open[index]} onClose={() => this.handleRequestClose(index)}
                                             maxWidth="md">
                                         <DialogTitle>{item.original_name}</DialogTitle>
                                         <DialogContent>

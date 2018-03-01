@@ -144,9 +144,18 @@ class Detail extends React.Component{
     componentDidMount(){
         const {dispatch}=this.props
         dispatch({type:'app/update',payload:{pageloading:false}})
+
+    }
+    componentDidUpdate(){
+      let spanList=document.getElementById('articlebody').getElementsByTagName('span')
+      for(let i=0;i<spanList.length;i++){
+        spanList.item(i).innerHTML=spanList.item(i).innerHTML.replace(/ /g,'&nbsp;')
+        console.log(spanList.item(i).innerHTML)
+      }
     }
     render(){
         const {blogs,classes}=this.props
+
         return (
             <div>
                 {blogs.current &&
@@ -169,7 +178,8 @@ class Detail extends React.Component{
                             </p>
                             <img src="/assets/blogs/authorimg.jpg" className={classes.authorAvatar} alt=""/>
                         </div>
-                        <div className={classes.articlebody} dangerouslySetInnerHTML={{__html:blogs.current.content }}></div>
+                      {/*<div className={classes.articlebody} dangerouslySetInnerHTML={{__html:"<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adada</p>"}}></div>*/}
+                        <div id="articlebody" className={classes.articlebody} dangerouslySetInnerHTML={{__html:blogs.current.content }}></div>
                         <div className={classes.floatPart}>
                             <div className={classes.floatPartInner}>
 

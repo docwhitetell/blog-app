@@ -1,20 +1,21 @@
-import React from 'react'
-import {connect} from 'dva'
-import Loading from '../../../../components/loading/FrontLoading'
-import {withStyles} from 'material-ui/styles'
-import Grid from 'material-ui/Grid'
-import Card, { CardHeader, CardMedia, CardContent, CardActions } from 'material-ui/Card'
-import Divider from 'material-ui/Divider'
-import classnames from 'classnames'
+import React from 'react';
+import { connect } from 'dva';
+import { withStyles } from 'material-ui/styles';
+import Grid from 'material-ui/Grid';
+import Divider from 'material-ui/Divider';
+import classnames from 'classnames';
 import ScrollAnim from 'rc-scroll-anim';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
-import {Icon,Pagination} from 'antd'
-import Button from 'material-ui/Button'
+import { Icon, Pagination } from 'antd';
+import Button from 'material-ui/Button';
 import Tooltip from 'material-ui/Tooltip';
-import styles from './blogstyles'
+import Card, { CardHeader, CardMedia, CardContent, CardActions} from 'material-ui/Card';
+import Loading from '../../../../components/loading/FrontLoading';
 
-const {OverPack}=ScrollAnim
+import styles from './blogstyles';
+
+const { OverPack } = ScrollAnim;
 class Blogs extends React.Component{
     constructor(props){
         super(props)

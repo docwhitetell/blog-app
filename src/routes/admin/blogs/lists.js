@@ -9,7 +9,6 @@ import Dialog, {
     DialogContent,
     DialogContentText,
     DialogTitle,
-    withMobileDialog,
 } from 'material-ui/Dialog';
 import Grid from 'material-ui/Grid'
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';

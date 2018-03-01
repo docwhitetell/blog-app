@@ -1,7 +1,7 @@
 import React from 'react'
 import Grid from 'material-ui/Grid';
-import Dropzone from '../../../components/upload/Dropzone'
-import AntdUpload from '../../../components/upload/antdUpload'
+//import Dropzone from '../../../components/upload/Dropzone'
+//import AntdUpload from '../../../components/upload/antdUpload'
 import AntdMultiUpload from '../../../components/upload/antdMutilUpload'
 
 import Button from 'material-ui/Button';
