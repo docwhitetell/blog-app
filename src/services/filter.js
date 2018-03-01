@@ -1,3 +1,3 @@
 export function filter(string) {
-    return string.replace(/<script.*?>.*?<\/script>/ig, '')
+  return string.replace(/<script.*?>.*?<\/script>/ig, '');
 }
