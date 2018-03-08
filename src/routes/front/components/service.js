@@ -3,14 +3,9 @@ import React from 'react';
 // import classnames from 'classnames';
 import ScrollAnim from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
-// import QueueAnim from 'rc-queue-anim';
 import Grid from 'material-ui/Grid';
-// import Hidden from 'material-ui/Hidden';
-// import Button from 'material-ui/Button';
-// import Dialog,
-// {DialogActions, DialogContent, DialogContentText, DialogTitle} from 'material-ui/Dialog';
-// import Play from 'material-ui-icons/PlayArrow';
-// import Card, {CardActions, CardContent, CardMedia} from 'material-ui/Card';
+import BlogDataChart from './blogDataChart';
+import BlogDataPie from './blogDatePie';
 const { OverPack } = ScrollAnim;
 
 const Service = ({ data, classes }) => {
@@ -40,7 +35,7 @@ const Service = ({ data, classes }) => {
       >
         <div className={classes.aboutLeft}>
           <h1 className={classes.aboutTitle} style={{}}>Me</h1>
-          <div className={classes.gradientDivider}></div>
+          <div className={classes.gradientDivider} />
         </div>
         <div className={classes.aboutRight}>
           <p className={classes.aboutWord}>
@@ -55,6 +50,14 @@ const Service = ({ data, classes }) => {
       <div className={classes.work}>
         <OverPack style={{ width: '100%' }} always={false} playScale={0.1}>
           <h1 key="title" className={classes.sectionName}>最新文章</h1>
+          <Grid key="chart" container spacing={24} style={{ }}>
+            <Grid item xs={6} >
+              <BlogDataChart height={300} data={data.blogs.classCount} />
+            </Grid>
+            <Grid item xs={6} >
+              <BlogDataPie height={300} data={data.blogs.classCount} />
+            </Grid>
+          </Grid>
           <Grid key="container" container spacing={40} style={{ minHeight: 380 }}>
             {data.blogslist.map((item, index) => {
               return (

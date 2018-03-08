@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
 import Divider from 'material-ui/Divider';
 import classnames from 'classnames';
+import { Link } from 'dva/router';
 // import ScrollAnim from 'rc-scroll-anim';
 // import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
@@ -29,7 +30,7 @@ class Blogs extends React.Component {
   }
 
   componentDidUpdate() {
-    const { app, dispatch } = this.props
+    const { app, dispatch } = this.props;
     if (app.pageloading) {
       dispatch({ type: 'app/update', payload: { pageloading: false } });
     }
@@ -197,14 +198,14 @@ class Blogs extends React.Component {
                         >
                           <Card>
                             <div className={classes.cardHeader}>
-                              <a href={`/blogs/${item.id}`}>
+                              <Link to={`/blogs/${item.id}`}>
                                 <h1 className={classes.articleTitle}>
                                   {item.title}
                                 </h1>
-                              </a>
+                              </Link>
                             </div>
                             <Divider />
-                            <a href={`/blogs/${item.id}`}>
+                            <Link to={`/blogs/${item.id}`}>
                               <div className={classes.articleDesc}>
                                 <div className={classes.articleDescWord}>
                                   <p className={classes.description}>{item.description}</p>
@@ -212,7 +213,7 @@ class Blogs extends React.Component {
                                 </div>
                                 <div className={classes.blogBg} style={{ backgroundImage: `url(${item.poster})` }} />
                               </div>
-                            </a>
+                            </Link>
                           </Card>
                         </TweenOne>
                       );

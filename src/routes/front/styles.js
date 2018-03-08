@@ -91,7 +91,7 @@ const styles = theme => ({
     },
   },
   titleDescription: {
-    marginTop: 18,
+    marginTop: -40,
     fontFamily: 'apple',
     fontSize: '16px',
     fontWeight: 600,
