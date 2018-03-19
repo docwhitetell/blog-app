@@ -121,7 +121,10 @@ const styles = theme => ({
       minHeight: 22,
       lineHeight: 1.7,
     },
-
+    '& img': {
+      maxWidth: '100%',
+    },
+    whiteSpace: 'pre',
   },
   articleShareIcon: {
     marginRight: 10,
@@ -138,12 +141,13 @@ const styles = theme => ({
   floatPartInner: {
     position: 'relative',
     margin: '0 auto',
-  }
+  },
 })
 class Detail extends React.Component {
   componentDidMount() {
-    const { dispatch } = this.props
+    const { blogs, dispatch } = this.props
     dispatch({ type: 'app/update', payload: { pageloading: false } });
+    console.log(blogs.current.content);
   }
 
   componentDidUpdate() {
@@ -152,6 +156,8 @@ class Detail extends React.Component {
       spanList.item(i).innerHTML = spanList.item(i).innerHTML.replace(/ /g, '&nbsp;')
       console.log(spanList.item(i).innerHTML);
     }
+    const { blogs, dispatch } = this.props
+    document.getElementById('articlebody').innerHTML = blogs.current.content;
   }
   render() {
     const { blogs, classes } = this.props
@@ -178,7 +184,15 @@ class Detail extends React.Component {
               </p>
               <img src="/assets/blogs/authorimg.jpg" className={classes.authorAvatar} alt="" />
             </div>
-            <div id="articlebody" className={classes.articlebody} dangerouslySetInnerHTML={{ __html: blogs.current.content }} />
+            {/*
+             <div
+             id="articlebody"
+             className={classes.articlebody}
+             dangerouslySetInnerHTML={{ __html: blogs.current.content }}
+             />
+             */}
+            <div id="articlebody" className={classes.articlebody}>
+            </div>
             <div className={classes.floatPart}>
               <div className={classes.floatPartInner} />
             </div>

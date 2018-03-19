@@ -6,23 +6,10 @@ import TweenOne from 'rc-tween-one';
 import Grid from 'material-ui/Grid';
 import BlogDataChart from './blogDataChart';
 import BlogDataPie from './blogDatePie';
+
 const { OverPack } = ScrollAnim;
 
 const Service = ({ data, classes }) => {
-/*  const handleRequestClose = (index) => {
-    // console.log(index)
-    dispatch({
-      type: 'front/dialogClose',
-      payload: index
-    });
-  }
-  const handleOpen = (index) => {
-    console.log(index)
-    dispatch({
-      type: 'front/dialogOpen',
-      payload: index,
-    });
-  }*/
   return (
     <div className={classes.mainContent}>
       <TweenOne

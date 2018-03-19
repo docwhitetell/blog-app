@@ -1,14 +1,12 @@
 import React from 'react';
 import { connect } from 'dva';
 import { withStyles } from 'material-ui/styles';
-// import classnames from 'classnames';
-// import ScrollAnim from 'rc-scroll-anim';
-// import Hidden from 'material-ui/Hidden';
-
-
 import Banner from './components/banner';
 import Service from './components/service';
 import styles from './styles';
+// import classnames from 'classnames';
+// import ScrollAnim from 'rc-scroll-anim';
+// import Hidden from 'material-ui/Hidden';
 // import Button from 'material-ui/Button';
 // import GradientProgress from '../../components/progress/gradient'
 // import {Icon} from 'antd'

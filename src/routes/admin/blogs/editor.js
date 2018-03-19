@@ -16,24 +16,15 @@ import TextField from 'material-ui/TextField';
 import Grid from 'material-ui/Grid';
 import { Icon, Upload, message } from 'antd';
 import Cookies from 'js-cookie';
-import MyEditor from '../../../components/editor/MyEditor';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
-// import Slider from 'react-slick'
-// import 'slick-carousel/slick/slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
 import config from '../../../utils/config';
 import { filter } from '../../../services/filter';
 import styles from './styles';
-// {blogs,dispatch,classes}
+
 class noteEditor extends React.Component {
   componentDidMount() {
-    /*     CKEDITOR.editorConfig = function( config ) {
-     // Define changes to default configuration here. For example:
-     // config.language = 'fr';
-     // config.uiColor = '#AADC6E';
-     };
-
-     CKEDITOR.replace( 'editor1' );*/
   }
 
   onEditorStateChange = (editorState) => {
@@ -43,12 +34,19 @@ class noteEditor extends React.Component {
       payload: { editorState: editorState },
     });
   }
+  onEditorChange = (value) => {
+    const { dispatch } = this.props;
+    dispatch({
+      type: 'blogs/update',
+      payload: { editorState: value },
+    });
+  }
   handleSubmit = () => {
     const { blogs, dispatch } = this.props
-    const data = draftToHtml(convertToRaw(blogs.editorState.getCurrentContent()))
-    const title = blogs.editTitle
+    // const data = draftToHtml(convertToRaw(blogs.editorState.getCurrentContent()))
+    const data = blogs.editorState;
+    const title = blogs.editTitle;
     if (blogs.current) {
-      console.log('has current')
       dispatch({
         type: 'blogs/updateBlog',
         payload: {
@@ -76,7 +74,6 @@ class noteEditor extends React.Component {
 
   handleInputChange = name => (e) => {
     const { blogs, dispatch } = this.props
-    // console.log(e.target.value)
     if (blogs.current !== null) {
       dispatch({
         type: 'blogs/update',
@@ -94,14 +91,22 @@ class noteEditor extends React.Component {
     const { blogs, dispatch, classes } = this.props
 
     const { editorState } = blogs
-
+    const modules = {
+      toolbar: [
+        [{ header: [1, 2, false] }],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+        [{ list: 'ordered' }, { list: 'bullet' }, { indent: '-1' }, { indent: '+1' }],
+        ['link', 'image'],
+        ['clean'],
+      ],
+    };
     const props = {
       name: 'file',
       action: config.api.fileUpload,
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
-        'Authorization': 'Bearer ' + Cookies('access_token'),
+        Authorization: `Bearer ${Cookies('access_token')}`,
       },
       onChange(info) {
         if (info.file.status !== 'uploading') {
@@ -111,7 +116,7 @@ class noteEditor extends React.Component {
           console.log(info.file.response.data.link)
           dispatch({
             type: 'blogs/update',
-            payload: { editPoster: info.file.response.data.link }
+            payload: { editPoster: info.file.response.data.link },
           })
           message.success(`${info.file.name} file uploaded successfully`);
         } else if (info.file.status === 'error') {
@@ -185,15 +190,14 @@ class noteEditor extends React.Component {
                 />
 
               </div>
-              {/*   <textarea name="content" id="editor1">
-
-               </textarea>*/}
-              <MyEditor
-                wrapperStyle={{ minHeight: 600 }}
-                editorStyle={{ height: 520, }}
-                editorState={editorState}
-                onEditorStateChange={this.onEditorStateChange}
-              />
+              <ReactQuill
+                value={editorState}
+                modules={modules}
+                onChange={this.onEditorChange}
+                onKeyPress={this.onKeyPress}
+              >
+                <div id="editor-area" style={{ minHeight: 400, whiteSpace: 'pre' }} />
+              </ReactQuill>
             </Card>
           </Grid>
 

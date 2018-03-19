@@ -45,6 +45,7 @@
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.3.1",
     "react-motion": "^0.5.2",
+    "react-quill": "^1.2.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-slick": "^0.15.4",
