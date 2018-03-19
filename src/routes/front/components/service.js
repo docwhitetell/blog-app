@@ -38,10 +38,10 @@ const Service = ({ data, classes }) => {
         <OverPack style={{ width: '100%' }} always={false} playScale={0.1}>
           <h1 key="title" className={classes.sectionName}>最新文章</h1>
           <Grid key="chart" container spacing={24} style={{ }}>
-            <Grid item xs={6} >
+            <Grid item xs={12} sm={6}>
               <BlogDataChart height={300} data={data.blogs.classCount} />
             </Grid>
-            <Grid item xs={6} >
+            <Grid item xs={12} sm={6}>
               <BlogDataPie height={300} data={data.blogs.classCount} />
             </Grid>
           </Grid>

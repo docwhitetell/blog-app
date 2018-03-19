@@ -24,8 +24,6 @@ import { filter } from '../../../services/filter';
 import styles from './styles';
 
 class noteEditor extends React.Component {
-  componentDidMount() {
-  }
 
   onEditorStateChange = (editorState) => {
     const { dispatch } = this.props
@@ -152,9 +150,12 @@ class noteEditor extends React.Component {
                       <MenuItem value="">
                         <em>None</em>
                       </MenuItem>
-                      <MenuItem value={'tech'}>Tech</MenuItem>
-                      <MenuItem value={'personal'}>Personal</MenuItem>
-                      <MenuItem value={'daily'}>Daily</MenuItem>
+                      <MenuItem value={'JavaScript'}>JavaScript</MenuItem>
+                      <MenuItem value={'PHP'}>PHP</MenuItem>
+                      <MenuItem value={'Java'}>Java</MenuItem>
+                      <MenuItem value={'NodeJs'}>NodeJs</MenuItem>
+                      <MenuItem value={'Http'}>Http</MenuItem>
+                      <MenuItem value={'Linux'}>Linux</MenuItem>
                     </Select>
                   </FormControl>
                 </div>

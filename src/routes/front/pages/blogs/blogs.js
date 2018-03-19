@@ -42,15 +42,40 @@ class Blogs extends React.Component {
   handleChangeClass = name => (e) => {
     const { dispatch } = this.props
     switch (name) {
-      case 'personal':
+      case 'JavaScript':
         dispatch({
           type: 'front/queryBlogs',
-          payload: { classes: 'personal' },
+          payload: { classes: 'JavaScript' },
         })
         break;
-      case 'all':
+      case 'PHP':
         dispatch({
           type: 'front/queryBlogs',
+          payload: { classes: 'PHP' },
+        })
+        break;
+      case 'Java':
+        dispatch({
+          type: 'front/queryBlogs',
+          payload: { classes: 'Java' },
+        })
+        break;
+      case 'NodeJs':
+        dispatch({
+          type: 'front/queryBlogs',
+          payload: { classes: 'NodeJs' },
+        })
+        break;
+      case 'Linux':
+        dispatch({
+          type: 'front/queryBlogs',
+          payload: { classes: 'Linux' },
+        })
+        break;
+      case 'Http':
+        dispatch({
+          type: 'front/queryBlogs',
+          payload: { classes: 'Http' },
         })
         break;
       default:
@@ -123,20 +148,52 @@ class Blogs extends React.Component {
                     <Icon type="appstore" style={{ fontSize: 30, color: '#2196F3' }} />
                   </Button>
                   <div className={classes.menuLists}>
-                    <Tooltip placement="bottom" title="所有">
+                    <Tooltip placement="bottom" title="JavaScript">
                       <Button
                         className={classnames(classes.menuButton)}
-                        onClick={this.handleChangeClass('all')}
+                        onClick={this.handleChangeClass('JavaScript')}
                       >
-                        <Icon type="calendar" className={classnames(classes.menuIcon)} />
+                        JavaScript
+                      </Button>
+                    </Tooltip>
+                    <Tooltip placement="bottom" title="NodeJs">
+                      <Button
+                        className={classnames(classes.menuButton)}
+                        onClick={this.handleChangeClass('NodeJs')}
+                      >
+                        NodeJs
+                      </Button>
+                    </Tooltip>
+                    <Tooltip placement="bottom" title="HTTP">
+                      <Button
+                        className={classnames(classes.menuButton)}
+                        onClick={this.handleChangeClass('Http')}
+                      >
+                        Http
+                      </Button>
+                    </Tooltip>
+                    <Tooltip placement="bottom" title="Linux">
+                      <Button
+                        className={classnames(classes.menuButton)}
+                        onClick={this.handleChangeClass('Linux')}
+                      >
+                        Linux
+                      </Button>
+                    </Tooltip>
+                    <Tooltip placement="bottom" title="PHP">
+                      <Button
+                        className={classnames(classes.menuButton)}
+                        onClick={this.handleChangeClass('PHP')}
+                      >
+                        PHP
                       </Button>
                     </Tooltip>
                     <Tooltip placement="bottom" title="其他">
                       <Button
                         className={classnames(classes.menuButton)}
-                        onClick={this.handleChangeClass('personal')}
+                        onClick={this.handleChangeClass('java')}
                       >
-                        <Icon type="edit" className={classnames(classes.menuIcon)} />
+                        Java
                       </Button>
                     </Tooltip>
                   </div>

@@ -226,6 +226,7 @@ const styles = theme => ({
     },
   },
   menuButton: {
+    textTransform: 'none',
     minWidth: 0,
     marginLeft: 20,
     [theme.breakpoints.down('sm')]: {

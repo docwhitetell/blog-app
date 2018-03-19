@@ -82,11 +82,14 @@ const Header = ({ app, classes, dispatch }) => {
                 My Blogs
               </ListItem>
             </Link>
-            <Link to="/login" className={classes.drawerListLogin}>
+            {app.user ? (<Link to="/admin/dashboard" className={classes.drawerListLink}>
               <ListItem button className={classes.drawerListItem}>
-                <Button raised color="accent">Sign In</Button>
-              </ListItem>
-            </Link>
+                <Button raised color="accent">Dashboard</Button>
+              </ListItem></Link>) : (<Link to="/login" className={classes.drawerListLink}>
+                <ListItem button className={classes.drawerListItem}>
+                  <Button raised color="accent">Sign In</Button>
+                </ListItem>
+              </Link>)}
           </List>
         </div>
       </Drawer>
