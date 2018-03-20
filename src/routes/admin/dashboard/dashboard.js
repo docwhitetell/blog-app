@@ -3,12 +3,12 @@ import { connect } from 'dva';
 // import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Grid from 'material-ui/Grid';
+
 import NumberCard from './components/NumberCard';
 import DataCard from './components/DataCard';
 import TabData from './components/TabData';
 import TableData from './components/TableData';
 import PieData from './components/PieData';
-
 import styles from './styles';
 
 const salseData = [
@@ -33,9 +33,9 @@ const salseData = [
     { name: 'Maternal and child products', percent: '7.80', sales: 1231, color: '#009688' },
     { name: 'Other', percent: '7.80%', sales: 1231, color: '#FFEB3B' },
   ],
-]
+];
 
-// {dashboard,dispatch,classes}
+// { dashboard,dispatch,classes }
 class Dashboard extends React.Component {
   handleTabChange = (event, value) => {
     const { dispatch } = this.props
@@ -45,9 +45,8 @@ class Dashboard extends React.Component {
     });
   }
   handleTablePageChange = (pagination, filters, sorter) => {
-    const { dashboard, dispatch } = this.props
-    if (pagination.current === dashboard.pagination.current) {
-    } else {
+    const { dashboard, dispatch } = this.props;
+    if (!pagination.current === dashboard.pagination.current) {
       dispatch({
         type: 'dashboard/getTableData',
         payload: pagination,
@@ -69,7 +68,6 @@ class Dashboard extends React.Component {
       <div style={{ marginTop: -68 }}>
         <NumberCard classes={classes} />
         <DataCard classes={classes} data={dashboard.data} />
-
         <div style={{ width: '96%', margin: '0 auto', padding: 4 }}>
           <TabData
             dashboard={dashboard}
@@ -96,4 +94,4 @@ class Dashboard extends React.Component {
 }
 
 
-export default connect(({ app,dashboard }) => ({ app, dashboard }))(withStyles(styles)(Dashboard));
+export default connect(({ app, dashboard }) => ({ app, dashboard }))(withStyles(styles)(Dashboard));

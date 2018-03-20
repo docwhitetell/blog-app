@@ -34,7 +34,7 @@ const styles = theme => ({
   },
   icon: {
     textAlign: 'center',
-    lineHeight: '120px',
+    lineHeight: '110px',
     fontSize: '54px',
   },
   icontext: {
@@ -43,11 +43,11 @@ const styles = theme => ({
   },
   cardLeft: {
     flex: 2,
-    height: 120,
+    height: 110,
   },
   cardRight: {
     flex: 3,
-    height: 120,
+    height: 110,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
