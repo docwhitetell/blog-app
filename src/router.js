@@ -5,6 +5,7 @@ import dynamic from 'dva/dynamic';
 import Layout from './routes/app';
 
 const { ConnectedRouter } = routerRedux;
+
 function RouterConfig({ history, app }) {
   const error = dynamic(
     {
@@ -14,21 +15,25 @@ function RouterConfig({ history, app }) {
   const routes = [
     {
       path: '/',
+      name: 'index',
       models: () => [import('./models/front')],
       component: () => import('./routes/front/welcome'),
     },
     {
       path: '/blogs',
+      name: 'frontBlogs',
       models: () => [import('./models/front')],
       component: () => import('./routes/front/pages/blogs/blogs'),
     },
     {
       path: '/blogs/:id',
+      name: 'blogdetail',
       models: () => [import('./models/blogs')],
       component: () => import('./routes/front/pages/blogs/detail'),
     },
     {
       path: '/login',
+      name: 'login',
       models: () => [import('./models/login')],
       component: () => import('./routes/login/login'),
     },

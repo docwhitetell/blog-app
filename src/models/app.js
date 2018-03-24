@@ -1,54 +1,55 @@
-import dva from 'dva'
-import {routerRedux} from 'dva/router'
-import {request} from '../services/request'
-import {routeMiddleware} from '../services/routeMiddleware'
-import Cookies from 'js-cookie'
-import config from '../utils/config'
-import queryString from 'query-string'
-import color from '../utils/theme'
-import store from 'store'
-const currentColor = store.get('currentColor') ? store.get('currentColor') : 'blue'
+import dva from 'dva';
+import { routerRedux } from 'dva/router';
+import Cookies from 'js-cookie';
+import queryString from 'query-string';
+import store from 'store';
+import { request } from '../services/request';
+import { routeMiddleware } from '../services/routeMiddleware';
+import config from '../utils/config';
+import color from '../utils/theme';
+
+const currentColor = store.get('currentColor') ? store.get('currentColor') : 'blue';
 
 let currentTheme = null;
 switch (currentColor) {
-  case "blue":
-    currentTheme = color.colors.blue
+  case 'blue':
+    currentTheme = color.colors.blue;
     break;
   case 'pink':
-    currentTheme = color.colors.pink
+    currentTheme = color.colors.pink;
     break;
   case 'indigo':
-    currentTheme = color.colors.indigo
+    currentTheme = color.colors.indigo;
     break;
   case 'red':
-    currentTheme = color.colors.red
+    currentTheme = color.colors.red;
     break;
   case 'purple':
-    currentTheme = color.colors.purple
+    currentTheme = color.colors.purple;
     break;
   case 'cyan':
-    currentTheme = color.colors.cyan
+    currentTheme = color.colors.cyan;
     break;
   case 'teal':
-    currentTheme = color.colors.teal
+    currentTheme = color.colors.teal;
     break;
   case 'green':
-    currentTheme = color.colors.green
+    currentTheme = color.colors.green;
     break;
   case 'yellow':
-    currentTheme = color.colors.yellow
+    currentTheme = color.colors.yellow;
     break;
   case 'amber':
-    currentTheme = color.colors.amber
+    currentTheme = color.colors.amber;
     break;
   case 'orange':
-    currentTheme = color.colors.orange
+    currentTheme = color.colors.orange;
     break;
   case 'grey':
-    currentTheme = color.colors.grey
+    currentTheme = color.colors.grey;
     break;
   default:
-    currentTheme = color.colors.blue
+    currentTheme = color.colors.blue;
 }
 
 export default {
@@ -172,7 +173,7 @@ export default {
 
   reducers: {
     'update'(state, payload){
-      return {...state, ...payload.payload}
+      return {...state, ...payload.payload};
     },
     'dropdownShowHide'(state, payload) {
       switch (payload.payload) {
